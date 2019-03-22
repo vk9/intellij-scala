@@ -27,6 +27,7 @@ object ScalastyleCodeInspection {
       val dirs = possibleLocations.flatMap(name => Option(root.findChild(name))) :+ root
       dirs.flatMap(findConfigFile).headOption
     }
+
   }
 
   def configuration(project: Project): Option[ScalastyleConfiguration] = {
